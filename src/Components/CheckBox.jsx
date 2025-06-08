@@ -1,10 +1,15 @@
 import styled from "styled-components";
 
-const Checkbox = () => {
+const Checkbox = ({ isOpen, setIsOpen }) => {
   return (
     <StyledWrapper>
       <label className="burger" htmlFor="burger">
-        <input type="checkbox" id="burger" />
+        <input
+          type="checkbox"
+          id="burger"
+          checked={isOpen}
+          onChange={() => setIsOpen(!isOpen)}
+        />
         <span />
         <span />
         <span />
