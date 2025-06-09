@@ -11,19 +11,19 @@ export default function HeroSection() {
         <img
           loading="lazy"
           src={img3}
-          className="max-w-full  h-auto grow w-[350px] min-w-[350px] object-cover object-center max-[500px]:object-center"
+          className="max-w-full  min-[903px]:h-screen grow w-[350px] min-w-[350px] object-cover object-center max-[500px]:object-center"
           alt="oficial-04906"
         />
         <img
           loading="lazy"
           src={img1}
-          className="max-w-full  h-auto grow w-[350px] min-w-[350px] object-cover object-center max-[500px]:object-center"
+          className="max-w-full  min-[903px]:h-screen grow w-[350px] min-w-[350px] object-cover object-center max-[500px]:object-center"
           alt="DSC_6926"
         />
         <img
           loading="lazy"
           src={img2}
-          className="max-w-full  h-auto grow w-[350px] min-w-[350px] object-cover object-center max-[500px]:object-center   max-[1145px]:aspect-video"
+          className="max-w-full  min-[903px]:h-screen grow w-[350px] min-w-[350px] object-cover object-center max-[500px]:object-center   max-[1145px]:aspect-video"
           alt="DSC_6967"
         />
       </div>

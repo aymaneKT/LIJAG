@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 export default function FooterComponent() {
   const [currentTime, setCurrentTime] = useState("");
   const [location, setLocation] = useState({
-    city: "",
     country: "",
     region: "",
   });
@@ -12,15 +11,22 @@ export default function FooterComponent() {
   const fetchLocation = async () => {
     const response = await fetch("https://ipapi.co/json/");
     const data = await response.json();
-    setLocation({ ...location, city: data.city, country: data.country_name , region : data.region });
+    setLocation({
+      ...location,
+      country: data.country_name,
+      region: data.region,
+    });
   };
 
   useEffect(() => {
     fetchLocation();
     const interval = setInterval(() => {
       const now = new Date();
-      const formattedTime = now
-      .toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      const formattedTime = now.toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+      });
       setCurrentTime(formattedTime);
     }, 1000);
     return () => clearInterval(interval);
@@ -28,7 +34,7 @@ export default function FooterComponent() {
   return (
     <footer className="bg-white   w-full  mt-6 ">
       <div className="w-full text-center">
-        <div className="w-full flex flex-wrap   items-center justify-between item  py-2">
+        <div className="w-full flex flex-wrap  text-sm text-gray-500 items-center justify-between item  py-2">
           <a href="/" className="flex items-center">
             <img
               src={logo}
@@ -36,7 +42,7 @@ export default function FooterComponent() {
               className="h-8 mr-2 max-w-[120px] w-auto object-contain"
             />
           </a>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm grow  text-gray-500">
             © 2025{" "}
             <a href="#" className="hover:underline">
               Lijag™
@@ -44,10 +50,8 @@ export default function FooterComponent() {
             . All rights reserved.
           </p>
           <p>
-            <span className="text-sm text-gray-500 ">
-              {location.city + " - " + location.region + " ,"+location.country+" "}
-              {currentTime.toLocaleString()}
-            </span>
+            {location.region + " ," + location.country + " "}
+            {currentTime.toLocaleString()}
           </p>
         </div>
       </div>
