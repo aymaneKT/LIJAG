@@ -15,7 +15,7 @@ function App() {
     document.body.style.overflow = isLoading ? "hidden" : "visible";
   }, [isLoading]);
   return (
-    <div className="px-10 bg-white">
+    <div className="min-[500px]:px-10 max-[499px]:px-5 bg-white">
       <Loader isLoading={isLoading} />
       <Header />
       <HeroSection />
