@@ -6,8 +6,8 @@ import DecryptedText from "./Utils/DecryptedText";
 
 export default function HeroSection() {
   return (
-    <div className="relative">
-      <div className="flex gap-2 mb-4 items-center flex-wrap overflow-hidden max-[903px]:flex-wrap">
+    <div>
+      <div className="flex gap-2  items-center flex-wrap overflow-hidden max-[903px]:flex-wrap">
         <img
           loading="lazy"
           src={img3}
@@ -27,26 +27,55 @@ export default function HeroSection() {
           alt="DSC_6967"
         />
       </div>
-      <div className="absolute  -bottom-7 whitespace-pre flex items-center flex-col left-1/2 gap-2 -translate-1/2 text-2xl">
-        {/* <h2 className=" text-white font-['Nouveau_IBM'] text-xl mb-1">
-          "Bad ones into good ones"
-        </h2> */}
-        <div className=" text-center text-white font-['Nouveau_IBM'] text-xl">
-          <DecryptedText
-            text="'Bad ones into good ones'"
-            speed={50}
-            maxIterations={20}
-            characters="ABCD1234!?"
-            className="revealed"
-            parentClassName="all-letters"
-            encryptedClassName="encrypted"
-            revealDirection="center"
-          />
+      <div>
+        <div className="flex items-center justify-between flex-wrap">
+          <div className=" flex justify-center items-center flex-wrap  space-x-4 my-4">
+            <a
+              href="https://www.instagram.com/lijag_/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <svg
+                className="w-6 h-6 text-gray-600 hover:text-black"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.25.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+              </svg>
+            </a>
+            <a
+              href="https://www.youtube.com/@lijag000"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+            >
+              <svg
+                className="w-6 h-6 text-gray-600 hover:text-black"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M19.6 4.3c-1.3-.5-4.6-.5-7.6-.5s-6.3 0-7.6.5c-1.3.5-2.3 1.4-2.5 2.6-.5 1.4-.5 4.2-.5 5.1s0 3.7.5 5.1c.2 1.2 1.2 2.1 2.5 2.6 1.3.5 4.6.5 7.6.5s6.3 0 7.6-.5c1.3-.5 2.3-1.4 2.5-2.6.5-1.4.5-4.2.5-5.1s0-3.7-.5-5.1c-.2-1.2-1.2-2.1-2.5-2.6zM9.8 15.3v-6l5.6 3-5.6 3z" />
+              </svg>
+            </a>
+          </div>
+          <div className=" text-center text-black font-['Nouveau_IBM'] text-xl">
+            <DecryptedText
+              text="'Bad ones into good ones'"
+              speed={50}
+              maxIterations={20}
+              characters="ABCD1234!?"
+              className="revealed"
+              parentClassName="all-letters"
+              encryptedClassName="encrypted"
+              revealDirection="center"
+            />
+          </div>
+          <button className=" relative text-black z-10 border-2 border-black    px-4 overflow-hidden rounded-full cursor-pointer font-['Nouveau_IBM'] flex items-center justify-center group hover:text-white">
+            View More
+            <span className="absolute left-1/2 -z-20 bottom-0 -translate-x-1/2  bg-[#74896C] h-0 w-full rounded-full transition-all duration-300 group-hover:h-full"></span>
+          </button>
         </div>
-        <button className="relative text-white z-10 border-2   border-white px-4 overflow-hidden rounded-full cursor-pointer font-['Nouveau_IBM'] flex items-center justify-center group">
-          View More
-          <span className="absolute left-1/2 -z-20 bottom-0 -translate-x-1/2  bg-[#74896C] h-0 w-full rounded-full transition-all duration-300 group-hover:h-full"></span>
-        </button>
       </div>
     </div>
   );

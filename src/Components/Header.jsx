@@ -34,7 +34,7 @@ export default function Header() {
             <img
               src={logo}
               alt="Logo"
-              className="w-[150px] max-w-[100%] max-[1250px]:hidden"
+              className="w-[120px] max-w-[100%] max-[1250px]:hidden"
             />
           </a>
 
