@@ -13,14 +13,13 @@ export default function FooterComponent() {
   return (
     <footer className="bg-white   w-full  mt-6 ">
       <div className="w-full text-center">
-        <div className="w-full flex  flex-wrap  items-center justify-between item  py-2">
+        <div className="w-full flex flex-wrap   items-center justify-between item  py-2">
           <a href="/" className="flex items-center">
             <img
               src={logo}
               alt="LIJAG Logo"
               className="h-8 mr-2 max-w-[120px] w-auto object-contain"
             />
-            {/* <span className="font-bold text-lg whitespace-nowrap">LIJAG</span> */}
           </a>
           <p className="text-sm text-gray-500">
             © 2025{" "}

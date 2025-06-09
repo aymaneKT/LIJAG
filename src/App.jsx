@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     setInterval(() => {
       setIsLoading(false);
-    }, 2500);
+    }, 3000);
   }, []);
   useEffect(() => {
     document.body.style.overflow = isLoading ? "hidden" : "visible";

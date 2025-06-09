@@ -12,7 +12,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="max-[1250px]:flex items-center z-10 justify-between relative mb py-2">
+      <div className="max-[1250px]:flex items-center z-5 justify-between relative mb py-2">
         <div
           className={`flex items-center bg-white justify-between max-[1250px]:h-screen overflow-hidden max-[1250px]:top-0 uppercase font-['JetBrains_Mono'] transition-all duration-500 max-[1250px]:absolute w-[100%] max-[1250px]:flex-col max-[1250px]:gap-4 max-[1250px]:justify-center ${
             isOpen ? "max-[1250px]:left-0" : "max-[1250px]:left-[-100%]"
