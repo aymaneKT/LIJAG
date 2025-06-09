@@ -3,10 +3,25 @@ import { useEffect, useState } from "react";
 
 export default function FooterComponent() {
   const [currentTime, setCurrentTime] = useState("");
+  const [location, setLocation] = useState({
+    city: "",
+    country: "",
+    region: "",
+  });
+
+  const fetchLocation = async () => {
+    const response = await fetch("https://ipapi.co/json/");
+    const data = await response.json();
+    setLocation({ ...location, city: data.city, country: data.country_name , region : data.region });
+  };
 
   useEffect(() => {
+    fetchLocation();
     const interval = setInterval(() => {
-      setCurrentTime(new Date());
+      const now = new Date();
+      const formattedTime = now
+      .toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      setCurrentTime(formattedTime);
     }, 1000);
     return () => clearInterval(interval);
   }, []);
@@ -29,7 +44,8 @@ export default function FooterComponent() {
             . All rights reserved.
           </p>
           <p>
-            <span className="text-sm text-gray-500">
+            <span className="text-sm text-gray-500 ">
+              {location.city + " - " + location.region + " ,"+location.country+" "}
               {currentTime.toLocaleString()}
             </span>
           </p>
