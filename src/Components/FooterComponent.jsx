@@ -6,20 +6,17 @@ export default function FooterComponent() {
       <div className="w-full text-center">
         {/* Brand + Links */}
         <div className="w-full flex gap-5 flex-wrap  items-center justify-center  mb-4">
-          {/* Brand */}
-          <div className="flex  items-center justify-center sm:justify-start mb-4 sm:mb-0 w-full sm:w-auto">
-            <a href="/" className="flex items-center">
-              <img
-                src={logo}
-                alt="LIJAG Logo"
-                className="h-8 mr-2 max-w-[120px] w-auto object-contain"
-              />
-              <span className="font-bold text-lg whitespace-nowrap">LIJAG</span>
-            </a>
-          </div>
           {/* Links + Newsletter */}
           <div className="flex flex-wrap items-center gap-2.5 justify-center space-y-2 sm:space-y-0 sm:space-x-6">
-            <div className="flex justify-center items-center  space-x-4 my-4">
+            <div className="flex justify-center items-center flex-wrap  space-x-4 my-4">
+              <a href="/" className="flex items-center">
+                <img
+                  src={logo}
+                  alt="LIJAG Logo"
+                  className="h-8 mr-2 max-w-[120px] w-auto object-contain"
+                />
+                {/* <span className="font-bold text-lg whitespace-nowrap">LIJAG</span> */}
+              </a>
               <a
                 href="https://www.instagram.com/lijag_/"
                 target="_blank"
