@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import logo from "../Images/Logo_FULL_Color_vectorRGB_Mesa de trabajo 1.png";
 import Checkbox from "./CheckBox";
+import { useNavigate } from "react-router";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const headerList = ["Manifest", "Gallery", "Products", "Contact"];
-
+  const navigate = useNavigate();
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "visible";
   }, [isOpen]);
@@ -21,6 +22,10 @@ export default function Header() {
           <ul className="flex items-center grow justify-start gap-7 max-[1250px]:flex-col max-[1250px]:grow-0 max-[1250px]:gap-4">
             {headerList.slice(0, 2).map((e, i) => (
               <li
+                onClick={() => {
+                  navigate(`/${e}`);
+                  setIsOpen(false);
+                }}
                 key={i}
                 className="cursor-pointer transition-all duration-200 hover:text-[#8A8A8A]"
               >
@@ -41,6 +46,10 @@ export default function Header() {
           <ul className="flex items-center grow justify-end gap-8 max-[1250px]:flex-col max-[1250px]:grow-0 max-[1250px]:gap-4">
             {headerList.slice(2).map((e, i) => (
               <li
+                onClick={() => {
+                  navigate(`/${e}`);
+                  setIsOpen(false);
+                }}
                 key={i}
                 className="cursor-pointer transition-all duration-200 hover:text-[#8A8A8A]"
               >
