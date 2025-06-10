@@ -3,6 +3,7 @@ import FooterComponent from "./Components/FooterComponent";
 import Header from "./Components/Header";
 import Loader from "./Components/Loader";
 import HeroSection from "./Components/HeroSection";
+import ContactForm from "./Components/ContactForm";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -16,10 +17,12 @@ function App() {
   }, [isLoading]);
   return (
     <div className="min-[500px]:px-10 max-[499px]:px-5 bg-white">
-      <Loader isLoading={isLoading} />
+      <Header />
+      {/* <Loader isLoading={isLoading} />
       <Header />
       <HeroSection />
-      <FooterComponent />
+      <FooterComponent /> */}
+      <ContactForm />
     </div>
   );
 }
