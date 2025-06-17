@@ -3,9 +3,12 @@ import logo from "../Images/Logo_FULL_Color_vectorRGB_Mesa de trabajo 1.png";
 import Checkbox from "./CheckBox";
 import { useNavigate } from "react-router";
 
+import animatedLogo from "../Images/ezgif.com-optimize.gif";
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const headerList = ["Manifest", "Gallery", "Products", "Contact"];
+  const [isAnimatedLogo, setIsAnomatedLogo] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "visible";
@@ -16,7 +19,7 @@ export default function Header() {
       <div className="max-[1250px]:flex items-center z-5 justify-between relative mb py-2">
         <div
           className={`flex items-center bg-white justify-between max-[1250px]:h-screen overflow-hidden max-[1250px]:top-0 uppercase font-['JetBrains_Mono'] transition-all duration-500 max-[1250px]:absolute w-[100%] max-[1250px]:flex-col max-[1250px]:gap-4 max-[1250px]:justify-center ${
-            isOpen ? "max-[1250px]:left-0" : "max-[1250px]:left-[-100%]"
+            isOpen ? "max-[1250px]:left-0" : "max-[1250px]:left-[-120%]"
           }`}
         >
           <ul className="flex items-center grow justify-start gap-7 max-[1250px]:flex-col max-[1250px]:grow-0 max-[1250px]:gap-4">
@@ -37,9 +40,17 @@ export default function Header() {
 
           <a href="/">
             <img
-              src={logo}
+              onMouseEnter={() => {
+                setIsAnomatedLogo(true);
+              }}
+              onMouseLeave={() => {
+                setIsAnomatedLogo(false);
+              }}
+              src={isAnimatedLogo ? animatedLogo : logo}
               alt="Logo"
-              className="w-[120px] max-w-[100%] max-[1250px]:hidden"
+              className={` max-w-[100%] max-[1250px]:hidden ${
+                isAnimatedLogo ? "w-[109px]" : "w-[120px]"
+              }`}
             />
           </a>
 
@@ -62,9 +73,17 @@ export default function Header() {
 
         <a href="/">
           <img
-            src={logo}
+            onMouseEnter={() => {
+              setIsAnomatedLogo(true);
+            }}
+            onMouseLeave={() => {
+              setIsAnomatedLogo(false);
+            }}
+            src={isAnimatedLogo ? animatedLogo : logo}
             alt="Logo"
-            className="w-[150px] min-[1250px]:hidden"
+            className={` min-[1250px]:hidden ${
+              isAnimatedLogo ? "w-[109px]" : "w-[120px]"
+            }`}
           />
         </a>
 

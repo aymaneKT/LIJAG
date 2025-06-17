@@ -32,7 +32,7 @@ export default function FooterComponent() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <footer className="bg-white   w-full  mt-6 ">
+    <footer className="bg-white   w-full mt-3 ">
       <div className="w-full text-center">
         <div className="w-full flex flex-wrap  text-sm text-gray-500 items-center justify-between item  py-2">
           <a href="/" className="flex items-center">
@@ -49,7 +49,7 @@ export default function FooterComponent() {
             </a>
             . All rights reserved.
           </p>
-          <p>
+          <p >
             {location.region + " ," + location.country + " "}
             {currentTime.toLocaleString()}
           </p>
