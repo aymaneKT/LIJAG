@@ -20,8 +20,8 @@ export default function HeroSection() {
   return (
     <>
       {/* <Loader isLoading={isLoading} /> */}
-      <div className="h-full flex flex-col">
-        <div className="flex-1 flex items-center justify-center relative min-h-0">
+      <div className="h-full flex flex-col relative">
+        <div className="flex-1 flex items-center relative justify-center  min-h-0">
           <img
             src={AnimationLandingPage}
             alt="Landing Animation"
@@ -29,7 +29,7 @@ export default function HeroSection() {
           />
         </div>
 
-        <div className="flex items-center gap-2 justify-between flex-wrap pt-3 px-2 bg-white/90 backdrop-blur-sm">
+        {/* <div className="flex w-full items-center gap-2 justify-between flex-wrap pt-3 px-2  bottom-10 text-white  ">
           <div className="flex justify-center items-center space-x-4">
             <a
               href="https://www.instagram.com/lijag_/"
@@ -78,7 +78,13 @@ export default function HeroSection() {
             View More
             <span className="absolute left-1/2 -z-20 bottom-0 -translate-x-1/2  bg-[#74896C] h-0 w-full rounded-full transition-all duration-300 group-hover:h-full"></span>
           </button>
-        </div>
+        </div> */}
+        <button style={{
+          fontSize: "clamp(1rem, 0.8vw, 1.3rem)",
+        }} className=" absolute bottom-4 right-4 text-white z-10 border-2 border-white    px-4 overflow-hidden rounded-full cursor-pointer font-['Nouveau_IBM'] flex items-center justify-center group hover:text-white">
+          View More
+          <span className="absolute left-1/2 -z-20 bottom-0 -translate-x-1/2  bg-[#74896C] h-0 w-full rounded-full transition-all duration-300 group-hover:h-full"></span>
+        </button>
       </div>
     </>
   );

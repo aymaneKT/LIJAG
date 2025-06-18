@@ -1,4 +1,4 @@
-import logo from "../Images/Logo_FULL_Color_vectorRGB_Mesa de trabajo 1.png";
+import logo from "../Images/Sketch_NEGRO.png";
 import { useEffect, useState } from "react";
 
 export default function FooterComponent() {
@@ -25,14 +25,14 @@ export default function FooterComponent() {
       const formattedTime = now.toLocaleTimeString([], {
         hour: "2-digit",
         minute: "2-digit",
-        second: "2-digit",
+        // second: "2-digit",
       });
       setCurrentTime(formattedTime);
     }, 1000);
     return () => clearInterval(interval);
   }, []);
   return (
-    <footer className="bg-white   w-full mt-3 ">
+    <footer className="bg-transparent w-full mt-3 pb-1 ">
       <div className="w-full text-center">
         <div className="w-full flex flex-wrap  text-sm text-gray-500 items-center justify-between item  py-2">
           <a href="/" className="flex items-center">
@@ -50,7 +50,7 @@ export default function FooterComponent() {
             . All rights reserved.
           </p>
           <p >
-            {location.region + " ," + location.country + " "}
+            {location.country + " "}
             {currentTime.toLocaleString()}
           </p>
         </div>
